@@ -15,6 +15,16 @@
       "type": "component",
       "component": "shared.hero",
       "repeatable": false
+    },
+    "about": {
+      "type": "component",
+      "component": "shared.about-us",
+      "repeatable": false
+    },
+    "whatwedo": {
+      "type": "component",
+      "component": "shared.work",
+      "repeatable": true
     }
   }
 }

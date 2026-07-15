@@ -1,9 +1,31 @@
 {
   "collectionName": "components_shared_works",
   "info": {
-    "displayName": "Work"
+    "displayName": "What we do"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtext": {
+      "type": "string"
+    },
+    "cards": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "background": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
   "config": {}
 }

@@ -5,7 +5,14 @@ export interface SharedAboutUs extends Struct.ComponentSchema {
   info: {
     displayName: 'About us';
   };
-  attributes: {};
+  attributes: {
+    about_us_picture: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    description: Schema.Attribute.Text;
+    subtext: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
 }
 
 export interface SharedButtonCta extends Struct.ComponentSchema {
@@ -15,6 +22,18 @@ export interface SharedButtonCta extends Struct.ComponentSchema {
   };
   attributes: {
     text_btn: Schema.Attribute.String;
+  };
+}
+
+export interface SharedCard extends Struct.ComponentSchema {
+  collectionName: 'components_shared_cards';
+  info: {
+    displayName: 'card';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    title: Schema.Attribute.String;
   };
 }
 
@@ -148,9 +167,16 @@ export interface SharedVolunteer extends Struct.ComponentSchema {
 export interface SharedWork extends Struct.ComponentSchema {
   collectionName: 'components_shared_works';
   info: {
-    displayName: 'Work';
+    displayName: 'What we do';
   };
-  attributes: {};
+  attributes: {
+    background: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    cards: Schema.Attribute.Component<'shared.card', true>;
+    subtext: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
 }
 
 declare module '@strapi/strapi' {
@@ -158,6 +184,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'shared.about-us': SharedAboutUs;
       'shared.button-cta': SharedButtonCta;
+      'shared.card': SharedCard;
       'shared.contact': SharedContact;
       'shared.hero': SharedHero;
       'shared.how-to-help': SharedHowToHelp;

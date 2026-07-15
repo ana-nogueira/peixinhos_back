@@ -4,6 +4,26 @@
     "displayName": "About us"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtext": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "about_us_picture": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
   "config": {}
 }
