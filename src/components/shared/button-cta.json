@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_shared_button_ctas",
+  "info": {
+    "displayName": "button cta"
+  },
+  "options": {},
+  "attributes": {
+    "text_btn": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

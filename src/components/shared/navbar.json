@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_shared_navbars",
+  "info": {
+    "displayName": "navbar"
+  },
+  "options": {},
+  "attributes": {
+    "about": {
+      "type": "string"
+    },
+    "work": {
+      "type": "string"
+    },
+    "impact": {
+      "type": "string"
+    },
+    "galery": {
+      "type": "string"
+    },
+    "volunteer": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}

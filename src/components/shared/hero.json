@@ -1,0 +1,59 @@
+{
+  "collectionName": "components_shared_heroes",
+  "info": {
+    "displayName": "Hero"
+  },
+  "options": {},
+  "attributes": {
+    "main_logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "floating_fish": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "subtext": {
+      "type": "string"
+    },
+    "main_text": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "help_cta": {
+      "type": "component",
+      "component": "shared.button-cta",
+      "repeatable": false
+    },
+    "volunteer_cta": {
+      "type": "component",
+      "component": "shared.button-cta",
+      "repeatable": false
+    },
+    "hero_bg": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
