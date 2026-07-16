@@ -45,6 +45,23 @@ export interface SharedContact extends Struct.ComponentSchema {
   attributes: {};
 }
 
+export interface SharedGalery extends Struct.ComponentSchema {
+  collectionName: 'components_shared_galeries';
+  info: {
+    displayName: 'galery';
+  };
+  attributes: {
+    description: Schema.Attribute.Text;
+    galery_cta: Schema.Attribute.String;
+    images: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    subtitle: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedHero extends Struct.ComponentSchema {
   collectionName: 'components_shared_heroes';
   info: {
@@ -77,7 +94,19 @@ export interface SharedImpact extends Struct.ComponentSchema {
   info: {
     displayName: 'Impact';
   };
-  attributes: {};
+  attributes: {
+    background: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
+    background_mobile: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios',
+      true
+    >;
+    impact_card: Schema.Attribute.Component<'shared.card', true>;
+    main_text: Schema.Attribute.String;
+    subtext: Schema.Attribute.String;
+    title: Schema.Attribute.String;
+  };
 }
 
 export interface SharedMedia extends Struct.ComponentSchema {
@@ -186,6 +215,7 @@ declare module '@strapi/strapi' {
       'shared.button-cta': SharedButtonCta;
       'shared.card': SharedCard;
       'shared.contact': SharedContact;
+      'shared.galery': SharedGalery;
       'shared.hero': SharedHero;
       'shared.how-to-help': SharedHowToHelp;
       'shared.impact': SharedImpact;

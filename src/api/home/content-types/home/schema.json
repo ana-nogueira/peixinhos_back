@@ -25,6 +25,16 @@
       "type": "component",
       "component": "shared.work",
       "repeatable": true
+    },
+    "impact": {
+      "type": "component",
+      "component": "shared.impact",
+      "repeatable": true
+    },
+    "galery": {
+      "type": "component",
+      "component": "shared.galery",
+      "repeatable": true
     }
   }
 }

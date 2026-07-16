@@ -742,7 +742,9 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    galery: Schema.Attribute.Component<'shared.galery', true>;
     Hero: Schema.Attribute.Component<'shared.hero', false>;
+    impact: Schema.Attribute.Component<'shared.impact', true>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
       Schema.Attribute.Private;
