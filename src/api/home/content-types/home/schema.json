@@ -40,6 +40,11 @@
       "type": "component",
       "component": "shared.testimony",
       "repeatable": true
+    },
+    "donate": {
+      "type": "component",
+      "component": "shared.how-to-help",
+      "repeatable": true
     }
   }
 }

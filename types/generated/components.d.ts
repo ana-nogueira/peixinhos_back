@@ -32,6 +32,7 @@ export interface SharedCard extends Struct.ComponentSchema {
   };
   attributes: {
     description: Schema.Attribute.Text;
+    donate_type: Schema.Attribute.Enumeration<['PIX', 'Cart\u00E3o', 'Boleto']>;
     icon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     title: Schema.Attribute.String;
   };
@@ -86,7 +87,14 @@ export interface SharedHowToHelp extends Struct.ComponentSchema {
   info: {
     displayName: 'How to help';
   };
-  attributes: {};
+  attributes: {
+    description: Schema.Attribute.Text;
+    donate_btn: Schema.Attribute.Component<'shared.button-cta', true>;
+    donate_card: Schema.Attribute.Component<'shared.card', true>;
+    observation: Schema.Attribute.String;
+    subtext: Schema.Attribute.String;
+    title: Schema.Attribute.Text;
+  };
 }
 
 export interface SharedImpact extends Struct.ComponentSchema {

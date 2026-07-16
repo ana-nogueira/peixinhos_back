@@ -4,6 +4,29 @@
     "displayName": "How to help"
   },
   "options": {},
-  "attributes": {},
+  "attributes": {
+    "title": {
+      "type": "text"
+    },
+    "subtext": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "observation": {
+      "type": "string"
+    },
+    "donate_card": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    },
+    "donate_btn": {
+      "type": "component",
+      "component": "shared.button-cta",
+      "repeatable": true
+    }
+  },
   "config": {}
 }

@@ -20,6 +20,14 @@
     },
     "description": {
       "type": "text"
+    },
+    "donate_type": {
+      "type": "enumeration",
+      "enum": [
+        "PIX",
+        "Cartão",
+        "Boleto"
+      ]
     }
   },
   "config": {}
