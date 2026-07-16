@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_shared_testimonies",
+  "info": {
+    "displayName": "Testimony"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "testimony_card": {
+      "type": "component",
+      "component": "shared.card",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

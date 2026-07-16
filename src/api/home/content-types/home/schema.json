@@ -35,6 +35,11 @@
       "type": "component",
       "component": "shared.galery",
       "repeatable": true
+    },
+    "testimony": {
+      "type": "component",
+      "component": "shared.testimony",
+      "repeatable": true
     }
   }
 }

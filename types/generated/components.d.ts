@@ -185,6 +185,18 @@ export interface SharedSlider extends Struct.ComponentSchema {
   };
 }
 
+export interface SharedTestimony extends Struct.ComponentSchema {
+  collectionName: 'components_shared_testimonies';
+  info: {
+    displayName: 'Testimony';
+  };
+  attributes: {
+    subtitle: Schema.Attribute.String;
+    testimony_card: Schema.Attribute.Component<'shared.card', true>;
+    title: Schema.Attribute.String;
+  };
+}
+
 export interface SharedVolunteer extends Struct.ComponentSchema {
   collectionName: 'components_shared_volunteers';
   info: {
@@ -225,6 +237,7 @@ declare module '@strapi/strapi' {
       'shared.rich-text': SharedRichText;
       'shared.seo': SharedSeo;
       'shared.slider': SharedSlider;
+      'shared.testimony': SharedTestimony;
       'shared.volunteer': SharedVolunteer;
       'shared.work': SharedWork;
     }
